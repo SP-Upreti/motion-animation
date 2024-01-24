@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+</head>
+<style>
+    body {
+        box-sizing: border-box;
+        padding: 4%;
+    }
+    .button {
+        padding: 16px 32px;
+        border-radius: 10px;
+        border: 1px solid black;
+        background-color: rgb(23, 23, 56);
+        color: white;
+        text-transform: capitalize;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all .3s ease-in-out;
+    }
+
+    .button:hover {
+        background-color: white;
+        color: black;
+    }
+
+    nav li {
+        list-style: none;
+    }
+
+    input {
+        display: none;
+    }
+
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 30px;
+        font-size: 130%;
+        padding: 2% 0%;
+        box-sizing: border-box;
+        transition: all 0.3s ease-in-out;
+    }
+
+
+
+    input[type="checkbox"]:checked+.button {
+        padding: 30px 65px;
+
+    }
+
+    input[type="checkbox"]:checked+ul {
+        padding: 2% 30%;
+    }
+</style>
+
+<body>
+    <nav>
+        <ul>
+            <li>Work</li>
+            <li>Company</li>
+            <li>Blogs</li>
+            <li>Carer</li>
+            <li><button class="button">Get a Quote</button></li>
+        </ul>
+    </nav>
+
+
+    <div>
+        <input type="checkbox" name="bx" id="bx">
+        <label for="bx" class="button">button 2</label>
+    </div>
+
+
+
+    <div style="padding: 5% 0;">
+        <label for="center" class="button">center the navbar</label>
+    </div>
+
+    <nav>
+        <input type="checkbox" name="center" id="center">
+        <ul>
+            <li>Work</li>
+            <li>Company</li>
+            <li>Blogs</li>
+            <li>Carer</li>
+            <li><button class="button">Get a Quote</button></li>
+        </ul>
+    </nav>
+
+    <p>
+        In above examples we can see three transitions
+        <ol >
+            <li>First transition on button . color transition changes smoothly</li>
+            <li>Second transition on button padding. when we click "Button 2" padding changes smoothly</li>
+            <li>Third we can see the transition applied on navbar. when we click button navbar comes to center</li>
+        </ol>
+        in similay ways we can use transition property for different properties as we need
+    </p>
+
+</body>
+
+</html>

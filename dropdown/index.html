@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/e9ffc8e955.js" crossorigin="anonymous"></script>
+    <title>Smooth dropdown menue</title>
+</head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            padding: 3%;
+            font-size: 140%;
+            background-color: rgb(34, 31, 31);
+            color: white;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        li {
+            list-style: none;
+            cursor: pointer;
+        }
+        .display-flex {
+            display: flex;
+        }
+        .gap-medium {
+            gap: 0.5em;
+        }
+        .gap-high {
+            gap: 4em;
+        }
+        .flex-center {
+            justify-content: center;
+            align-items: center;
+        }
+        .flex-column {
+            flex-direction: column;
+        }
+        .navbar li {
+            padding-bottom: 20px
+        }
+        .dropdown-content {
+            position: absolute;
+            top: 100%;
+            width: max-content;
+            padding: 10px 15px ;
+            background-color: rgb(34, 31, 31);
+            transform: translateX(-75px);
+            border-radius: 10px;
+            box-shadow: 0.2px 0.2px 5px rgba(255, 255, 255, 0.084);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        .navbar {
+            transform: translateY(10px);
+        }
+        .dropdown-content li {
+            padding: 15px 40px;
+            transition: all 0.4s ease-in-out;
+            cursor: pointer;
+            border-radius: 10px;
+            /* width: max-content; */
+        }
+        .sub-menue:hover .dropdown-content{
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-55px);
+        }
+        .dropdown-content li:hover {
+            background-color: rgb(19, 18, 18);
+        }
+        
+    </style>
+<body>
+    <nav class="display-flex" style="justify-content: space-between;align-items: center;">
+        <div class="logo ">
+            <span style="font-family: cursive;font-size: 30px;color: rgb(200, 200, 8);font-weight: 600;">Surendra</span>
+        </div>
+        <ul class="display-flex flex-center gap-high navbar" style="position: relative;">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li class="sub-menue">
+                <a href="" style="display: flex; align-items: center;gap: 5px;">Services <i class="fa fa-angle-down"></i></a>
+                <ul class="dropdown-content display-flex flex-column gap-medium">
+                    <li><a href="">Branding</a></li>
+                    <li><a href="">Web Design</a></li>
+                    <li><a href="">Web Development</a></li>
+                    <li><a href="">Web Hosting</a></li>
+                </ul>
+            </li>
+            <li><a href="">Blogs</a></li>
+        </ul>
+        <div class="action">
+            <div class=""><button class="button">get a quote</button></div>
+        </div>
+    </nav>
+    
+</body>
+</html>
